@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 6000
+      validation-timeout: 300
+      idle-timeout: 6000
+      login-timeout: 5
+      max-lifetime: 600
+      maximum-pool-size: 2
+      minimum-idle: 2
+      read-only: false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.243.129.93/wohe?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: nidayede124@
+  redis:
+    database: 0
+    host: 47.242.190.30
+    port: 6379
+    password: nidayede124
+server:
+  port: 6002
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+
+mybatis-plus:
+  # 支持统配符 * 或者 ; 分割
+  #  typeEnumsPackage:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# 腾讯云短信服务配置
+tencent:
+  sms-config:
+    # 腾讯云账户密钥对 secretId 和 secretKey
+    secretId: AKIDuKTKvlrbw01pZ3yKfDiy0h7njQzLm99t
+    secretKey: g8JKzXquloba2T5B6lCMEpDKAi25uTnq
+    # 短信应用appId和appKey
+    appId: 1400234987
+    appKey:
+    # 签名
+    smsSign: 223470
+    # 过期时间
+    expireTime: 10
+    #注册验证码模板id
+    loginTempId: 1548044
+    #加入好邻盟模板id
+    joinTempId: 1163891
+    #注销账号验证码
+    cancelTempId: 1548044
+    #修改密码短信验证码
+    modifyPwdTempId: 1548044

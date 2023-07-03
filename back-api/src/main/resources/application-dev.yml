@@ -1,0 +1,50 @@
+spring:
+  redis:
+    database: 1
+    host: 1.14.61.169
+    port: 6379
+    password: 990821
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 6000
+      validation-timeout: 300
+      idle-timeout: 6000
+      login-timeout: 5
+      max-lifetime: 600
+      maximum-pool-size: 2
+      minimum-idle: 2
+      read-only: false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://1.14.61.169/test?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 990821zjk@#$%
+  data:
+    mongodb:
+      host: 1.14.61.169
+      port: 27017
+      username: "root"
+      password: "990821"
+      database: runoob
+      authentication-database: admin
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 20MB
+        max-request-size: 20MB
+mybatis-plus:
+  # 支持统配符 * 或者 ; 分割
+  #  typeEnumsPackage:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 6001
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
