@@ -4,7 +4,7 @@ import com.alipay.api.AlipayApiException;
 import com.ijpay.alipay.AliPayApiConfig;
 
 /**
- * @author Javen
+ * @author libarJaven
  */
 public abstract class AbstractAliPayApiController {
 	/**

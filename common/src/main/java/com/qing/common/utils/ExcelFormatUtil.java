@@ -13,7 +13,7 @@ import org.apache.poi.xssf.streaming.SXSSFWorkbook;
 
 /**
  * excle样式工具类
- * @author linry
+ * @author libarlinry
  *
  */
 public class ExcelFormatUtil {

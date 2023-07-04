@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * 用户权限拦截器
  *
- * @author wanderingmaster
+ * @author libarwanderingmaster
  */
 public class AuthenticationInterceptor implements HandlerInterceptor {
 

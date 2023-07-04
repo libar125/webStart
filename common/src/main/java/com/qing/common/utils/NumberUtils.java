@@ -16,7 +16,7 @@ public class NumberUtils {
 
     /**
      * 获取8位不重复随机码（取当前时间戳转化为十六进制）
-     * @author ShelWee
+     * @author libarShelWee
      * @return
      */
     public String toHex(){

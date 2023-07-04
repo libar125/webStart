@@ -12,7 +12,7 @@ import java.util.UUID;
 /**
  * 字符串工具类，继承lang3字符串工具类
  *
- * @author L.com
+ * @author libarL.com
  */
 public final class StringUtils extends org.apache.commons.lang3.StringUtils {
 

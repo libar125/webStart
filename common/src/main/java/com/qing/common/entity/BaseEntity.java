@@ -12,7 +12,7 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 /**
- * @author Administrator
+ * @author libarAdministrator
  */
 @Data
 @Accessors(chain = true)

@@ -18,7 +18,7 @@ import java.util.Map;
  * @author: heshi
  */
 @Component
-public class JwtUtil {
+public  class JwtUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
     /**

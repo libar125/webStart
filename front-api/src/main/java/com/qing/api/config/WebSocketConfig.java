@@ -6,7 +6,7 @@
 //import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 //
 ///**
-// * @author buhao
+// * @author libarbuhao
 // * @version WebSocketConfig.java, v 0.1 2019-10-18 15:45 buhao
 // */
 //@Configuration

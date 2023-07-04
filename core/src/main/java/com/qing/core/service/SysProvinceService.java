@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 省份表 服务类
  * </p>
  *
- * @author libar
+ * @author libarlibar
  * @since 2023-07-03
  */
 public interface SysProvinceService extends IService<SysProvinceEntity> {

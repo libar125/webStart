@@ -11,7 +11,7 @@
 //import javax.annotation.Resource;
 //
 ///**
-// * @author Administrator
+// * @author libarAdministrator
 // */
 //@Component
 //public class EmailUtil {

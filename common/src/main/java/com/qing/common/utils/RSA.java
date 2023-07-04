@@ -21,7 +21,7 @@ import java.util.Map;
  * RSA签名,加解密处理核心文件，注意：密钥长度1024
  * </p>
  * 
- * @author leelun
+ * @author libarleelun
  * @version $Id: RSA.java, v 0.1 2013-11-15 下午2:33:53 lilun Exp $
  */
 public class RSA {

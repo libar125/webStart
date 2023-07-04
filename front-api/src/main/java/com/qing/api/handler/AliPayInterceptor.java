@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * <p>支付宝支付拦截器</p>
  *
- * @author Javen
+ * @author libarJaven
  */
 public class AliPayInterceptor implements HandlerInterceptor {
 

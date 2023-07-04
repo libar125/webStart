@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * @author Administrator
+ * @author libarAdministrator
  */
 @SpringBootApplication(scanBasePackages = {"com.qing.api","com.qing.common"})
 @EnableScheduling

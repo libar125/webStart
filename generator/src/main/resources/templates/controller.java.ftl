@@ -25,7 +25,7 @@ import java.util.List;
     * ${table.comment!}控制器
     * </p>
 *
-* @author ${author}
+* @author libar${author}
 * @since ${date}
 */
 <#if restControllerStyle>

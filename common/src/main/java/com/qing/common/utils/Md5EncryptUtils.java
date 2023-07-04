@@ -11,7 +11,7 @@ import java.util.TreeMap;
 
 /**
  * MD5加密算法
- * @author xumum
+ * @author libarxumum
  *
  */
 public class Md5EncryptUtils {
@@ -58,7 +58,7 @@ public class Md5EncryptUtils {
 	
 	/** 
      * 方法描述:签名字符串 
-     * @author xumum
+     * @author libarxumum
      * @param params 需要签名的参数 
      * @param key 签名密钥 
      * @return 

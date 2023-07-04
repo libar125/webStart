@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * ${table.comment!} Mapper 接口
  * </p>
  *
- * @author ${author}
+ * @author libar${author}
  * @since ${date}
  */
 <#if kotlin>

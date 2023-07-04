@@ -18,7 +18,7 @@ import javax.validation.constraints.NotBlank;
  * ${table.comment!}
  * </p>
  *
- * @author ${author}
+ * @author libar${author}
  * @since ${date}
  */
 <#if entityLombokModel>

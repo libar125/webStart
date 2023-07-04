@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * 省份表 Mapper 接口
  * </p>
  *
- * @author libar
+ * @author libarlibar
  * @since 2023-07-03
  */
 @Repository

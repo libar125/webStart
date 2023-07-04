@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * <p>数据转换类</p>
- * @author fjl
+ * @author libarfjl
  * @version $Id: ParamCharsetConvert.java, v 0.1 2013-11-12 下午1:01:09 fjl Exp $
  */
 public class DataConvertUtil {

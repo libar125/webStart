@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 /**
  * 用户权限拦截器
  *
- * @author wanderingmaster
+ * @author libarwanderingmaster
  */
 public class AuthenticationInterceptor implements HandlerInterceptor {
 
