@@ -83,7 +83,7 @@ public class Md5EncryptUtils {
     
     /** 
      * MD5生成签名字符串 
-     * @param map 需签名参数 
+     * @param parmas 需签名参数
      * @param key MD5key 
      * @return 
      */  
