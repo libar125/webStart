@@ -1,9 +1,4 @@
 spring:
-#  redis:
-#    database: 1
-#    host: 1.14.61.169
-#    port: 6379
-#    password: 990821
   datasource:
     hikari:
       connection-test-query: SELECT 1
@@ -16,9 +11,9 @@ spring:
       minimum-idle: 2
       read-only: false
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.155.235.122/db2022?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://139.155.235.122/web_start?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
-    password: 123456
+    password: guhGJUfwefe#123
 
 #  data:
 #    mongodb:
