@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author 徐一杰
  * @date 2022/9/23 16:38
- * @description
+ * @description 
  */
 @RestController
 @RequestMapping("/test")
@@ -17,7 +17,7 @@ public class TestController {
 
     /**
      * 此接口加上了 @SaIgnore 可以游客访问
-     * @return
+     * @return SaResult
      */
     @SaIgnore
     @RequestMapping("/getList")
@@ -27,7 +27,7 @@ public class TestController {
 
     /**
      * 登陆后才可调用该方法
-     * @return
+     * @return SaResult
      */
     @SaCheckLogin
     @RequestMapping("/select")
@@ -37,7 +37,7 @@ public class TestController {
 
     /**
      * 必须具有指定权限才能进入该方法
-     * @return
+     * @return SaResult
      */
     @SaCheckRole("super-admin")
     @RequestMapping("/delete")
@@ -47,7 +47,7 @@ public class TestController {
 
     /**
      * 注解式鉴权：SaMode.OR 只要具有其中一个权限即可通过校验
-     * @return
+     * @return SaResult
      */
     @RequestMapping("/add")
     @SaCheckPermission(value = {"user-add", "user-all"}, mode = SaMode.OR)
@@ -57,7 +57,7 @@ public class TestController {
 
     /**
      * 一个接口在具有权限 user-update 或角色 admin 时可以调通
-     * @return
+     * @return SaResult
      */
     @RequestMapping("/update")
     @SaCheckPermission(value = "user-add", orRole = "admin")
@@ -67,7 +67,7 @@ public class TestController {
 
     /**
      * 这个接口测试用
-     * @return
+     * @return SaResult
      */
     @RequestMapping("/testPermission")
     @SaCheckPermission(value = "user123")
