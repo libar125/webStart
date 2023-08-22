@@ -14,7 +14,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling
 @EnableTransactionManagement
 @MapperScan(value="com.qing.api.mapper")
-@EnableJpaAuditing
 public class FrontApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(FrontApiApplication.class);

@@ -1,9 +1,5 @@
 server:
   port: 6001
-
-
-
-
 spring:
   # Sa-Token配置
   sa-token:

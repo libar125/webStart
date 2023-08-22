@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @MapperScan(value="com.qing.webfapi.mapper")
-@SpringBootApplication(exclude ={DruidDataSourceAutoConfigure.class})
+@SpringBootApplication
 public class WebfapiApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebfapiApplication.class);
