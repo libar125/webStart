@@ -39,20 +39,19 @@ mybatis-plus:
 tencent:
   sms-config:
     # 腾讯云账户密钥对 secretId 和 secretKey
-    secretId: AKIDuKTKvlrbw01pZ3yKfDiy0h7njQzLm99t
-    secretKey: g8JKzXquloba2T5B6lCMEpDKAi25uTnq
+
+
     # 短信应用appId和appKey
-    appId: 1400234987
+
     appKey:
     # 签名
-    smsSign: 223470
+
     # 过期时间
-    expireTime: 10
+
     #注册验证码模板id
-    loginTempId: 1548044
+
     #加入好邻盟模板id
-    joinTempId: 1163891
+
     #注销账号验证码
-    cancelTempId: 1548044
+
     #修改密码短信验证码
-    modifyPwdTempId: 1548044

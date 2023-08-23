@@ -1,4 +1,4 @@
-//package com.qing.common.entity;
+package com.qing.core.entity.base;//package com.qing.common.entity;
 //
 //import com.baomidou.mybatisplus.annotation.TableField;
 //import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

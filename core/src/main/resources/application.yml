@@ -1,0 +1,10 @@
+mybatis-plus:
+  # \u652F\u6301\u7EDF\u914D\u7B26 * \u6216\u8005 ; \u5206\u5272
+  #  typeEnumsPackage:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      logic-delete-value: 1 # \u903B\u8F91\u5DF2\u5220\u9664\u503C(\u9ED8\u8BA4\u4E3A 1)
+      logic-not-delete-value: 0 # \u903B\u8F91\u672A\u5220\u9664\u503C(\u9ED8\u8BA4\u4E3A 0)
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
