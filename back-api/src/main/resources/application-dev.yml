@@ -61,3 +61,10 @@ spring:
     url: jdbc:mysql://139.155.235.122/web_start?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: guhGJUfwefe#123
+knife4j:
+  enableAggregation: true
+  disk:
+    enable: true
+    routes:
+      - name: 用户
+        location: classpath:openapi/openapi.json

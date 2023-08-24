@@ -1,0 +1,50 @@
+{
+  "components": {
+    "schemas": {
+      "_test_testrequest": {},
+      "_test_testresponse": {}
+    }
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1"
+    }
+  ],
+  "openapi": "3.0.3",
+  "paths": {
+    "/test/test": {
+      "get": {
+        "summary": "",
+        "deprecated": false,
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_test_testresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "Return void."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "d73d1bee6efeae974c7e6189b09cada9",
+        "parameters": []
+      }
+    }
+  },
+  "info": {
+    "title": "webstart",
+    "version": "1.0.0"
+  }
+}

@@ -2,6 +2,6 @@
   "serverUrl": "http://127.0.0.1",
   "isStrict": false,
   "allInOne": true,
-  "outPath": "src/main/resources/static/doc",
+  "outPath": "src/main/resources/openapi",
   "projectName": "smart-doc"
 }
