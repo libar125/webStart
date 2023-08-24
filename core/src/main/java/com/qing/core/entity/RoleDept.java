@@ -18,13 +18,11 @@ public class RoleDept implements Serializable {
     /**
      * 角色ID
      */
-    @TableId
     private Long roleId;
 
     /**
      * 部门ID
      */
-    @TableId
     private Long deptId;
 
     @TableField(exist = false)
