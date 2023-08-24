@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.qing.core.entity.base.BaseEntity;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -17,12 +18,14 @@ public class RoleDept implements Serializable {
     /**
      * 角色ID
      */
-    private String roleId;
+    @TableId
+    private Long roleId;
 
     /**
      * 部门ID
      */
-    private String deptId;
+    @TableId
+    private Long deptId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

@@ -4,10 +4,9 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.qing.core.entity.base.BaseEntity;
 import java.io.Serializable;
 import java.util.Date;
-
-import com.qing.core.entity.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,7 +22,7 @@ public class Dict extends BaseEntity implements Serializable {
     /**
      * 父级id
      */
-    private String parentId;
+    private Long parentId;
 
     /**
      * 字典名称

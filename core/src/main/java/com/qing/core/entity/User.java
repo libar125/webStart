@@ -1,12 +1,12 @@
 package com.qing.core.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.qing.core.entity.base.BaseEntity;
 import java.io.Serializable;
 import java.util.Date;
-
-import com.qing.core.entity.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,6 +18,7 @@ import lombok.EqualsAndHashCode;
 @TableName(value ="sys_user")
 @Data
 public class User extends BaseEntity implements Serializable {
+
     /**
      * 用户名称
      */
@@ -31,7 +32,7 @@ public class User extends BaseEntity implements Serializable {
     /**
      * 所属部门
      */
-    private String deptId;
+    private Long deptId;
 
     /**
      * 密码

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.qing.core.entity.base.BaseEntity;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -17,12 +18,14 @@ public class RoleMenu implements Serializable {
     /**
      * 角色ID
      */
-    private String roleId;
+    @TableId
+    private Long roleId;
 
     /**
      * 菜单ID
      */
-    private String menuId;
+    @TableId
+    private Long menuId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

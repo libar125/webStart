@@ -18,11 +18,10 @@ import lombok.EqualsAndHashCode;
 @TableName(value ="sys_menu")
 @Data
 public class Menu extends BaseEntity implements Serializable {
-
     /**
      * 父菜单ID
      */
-    private String parentId;
+    private Long parentId;
 
     /**
      * 菜单名称

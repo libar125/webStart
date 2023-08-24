@@ -1,10 +1,12 @@
 package com.qing.core.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-
 import com.qing.core.entity.base.BaseEntity;
+import java.io.Serializable;
+import java.util.Date;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -20,7 +22,7 @@ public class Dept extends BaseEntity implements Serializable {
     /**
      * 父部门id
      */
-    private String parentId;
+    private Long parentId;
 
     /**
      * 部门名称

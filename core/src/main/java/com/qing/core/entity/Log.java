@@ -41,7 +41,7 @@ public class Log extends BaseEntity implements Serializable {
     /**
      * 状态
      */
-    private String state;
+    private Integer state;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

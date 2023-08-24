@@ -4,16 +4,17 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.qing.core.entity.base.BaseEntity;
 import java.io.Serializable;
 import java.util.Date;
-
-import com.qing.core.entity.base.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 角色信息表
  * @TableName sys_role
  */
+@EqualsAndHashCode(callSuper = true)
 @TableName(value ="sys_role")
 @Data
 public class Role extends BaseEntity implements Serializable {
