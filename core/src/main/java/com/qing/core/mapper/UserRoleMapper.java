@@ -1,7 +1,10 @@
 package com.qing.core.mapper;
 
+import com.qing.core.entity.Role;
 import com.qing.core.entity.UserRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
 * @author ADMIN
@@ -11,6 +14,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface UserRoleMapper extends BaseMapper<UserRole> {
 
+    List<Role> getRoleByUserId(Long userId);
 }
 
 

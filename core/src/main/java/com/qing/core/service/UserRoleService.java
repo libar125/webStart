@@ -1,7 +1,10 @@
 package com.qing.core.service;
 
+import com.qing.core.entity.Role;
 import com.qing.core.entity.UserRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
 * @author ADMIN
@@ -10,4 +13,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface UserRoleService extends IService<UserRole> {
 
+    /**
+     * 获取用户角色
+     * @param userId 用户id
+     * @return 角色列表
+     */
+    List<Role> getRoleByUserId(Long userId);
 }

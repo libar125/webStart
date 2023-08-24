@@ -12,4 +12,20 @@
     <sql id="Base_Column_List">
         role_id,user_id
     </sql>
+
+    <select id="getRoleByUserId" resultType="com.qing.core.entity.Role">
+        SELECT
+            sr.id,
+            sr.role_key,
+            sr.role_name
+        FROM
+            sys_user_role sur
+                INNER JOIN sys_role sr ON sr.id = sur.role_id
+                AND sr.is_delete = 0
+        WHERE
+            sur.user_id = 1
+        ORDER BY
+            sr.id DESC
+    </select>
+    
 </mapper>

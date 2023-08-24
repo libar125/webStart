@@ -1,10 +1,13 @@
 package com.qing.core.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.qing.core.entity.Role;
 import com.qing.core.entity.UserRole;
 import com.qing.core.service.UserRoleService;
 import com.qing.core.mapper.UserRoleMapper;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
 * @author ADMIN
@@ -14,6 +17,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole>
     implements UserRoleService{
+
+    @Override
+    public List<Role> getRoleByUserId(Long userId){
+        return baseMapper.getRoleByUserId(userId);
+    }
 
 }
 
