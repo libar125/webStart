@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/test")
 public class TestController {
 
-    private final UserServiceImpl userService;
 
     @GetMapping("/test")
     public void test(){

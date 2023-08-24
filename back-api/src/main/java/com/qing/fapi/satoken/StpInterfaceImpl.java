@@ -1,6 +1,7 @@
 package com.qing.fapi.satoken;
 
 import cn.dev33.satoken.stp.StpInterface;
+import com.qing.core.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -10,19 +11,14 @@ import java.util.List;
 @RequiredArgsConstructor
 @Component
 public class StpInterfaceImpl implements StpInterface {
-
-    private final UserService userService;
-
-
     /**
      * 返回一个账号所拥有的权限码集合
      * 即你在调用 StpUtil.login(id) 时写入的标识值。
      */
     @Override
     public List<String> getPermissionList(Object loginId, String loginType) {
+        return null;
 
-
-        return userService.getPermissionListByUserId((String) loginId);
     }
 
     /**
