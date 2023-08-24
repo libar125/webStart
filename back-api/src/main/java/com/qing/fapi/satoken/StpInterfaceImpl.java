@@ -1,7 +1,6 @@
-package com.qing.fapi.component;
+package com.qing.fapi.satoken;
 
 import cn.dev33.satoken.stp.StpInterface;
-import com.qing.core.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +9,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Component
-public class UserPermission implements StpInterface {
+public class StpInterfaceImpl implements StpInterface {
 
     private final UserService userService;
 
@@ -21,6 +20,8 @@ public class UserPermission implements StpInterface {
      */
     @Override
     public List<String> getPermissionList(Object loginId, String loginType) {
+
+
         return userService.getPermissionListByUserId((String) loginId);
     }
 
@@ -39,4 +40,3 @@ public class UserPermission implements StpInterface {
     }
 
 }
-

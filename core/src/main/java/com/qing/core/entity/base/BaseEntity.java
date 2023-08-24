@@ -24,12 +24,12 @@ public class BaseEntity implements Serializable {
      * id
      */
     @TableId(type = IdType.AUTO)
-    public String id;
+    public Long id;
 
     /**
      * 创建者
      */
-    private String createBy;
+    private Long createBy;
 
     /**
      * 创建时间
@@ -40,7 +40,7 @@ public class BaseEntity implements Serializable {
     /**
      * 更新者
      */
-    private String updateBy;
+    private Long updateBy;
 
     /**
      * 修改时间

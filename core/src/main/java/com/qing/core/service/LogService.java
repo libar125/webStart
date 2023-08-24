@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 /**
 * @author ADMIN
 * @description 针对表【sys_log】的数据库操作Service
-* @createDate 2023-08-23 15:07:26
+* @createDate 2023-08-24 15:21:22
 */
 public interface LogService extends IService<Log> {
 

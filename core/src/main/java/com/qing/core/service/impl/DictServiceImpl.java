@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
 * @author ADMIN
 * @description 针对表【sys_dict(字典)】的数据库操作Service实现
-* @createDate 2023-08-23 15:07:49
+* @createDate 2023-08-24 15:21:17
 */
 @Service
 public class DictServiceImpl extends ServiceImpl<DictMapper, Dict>
