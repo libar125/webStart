@@ -4,44 +4,92 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.qing.core.entity.base.BaseEntity;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
- * 
+ * 系统日志
  * @TableName sys_log
  */
-@EqualsAndHashCode(callSuper = true)
 @TableName(value ="sys_log")
 @Data
-public class Log extends BaseEntity implements Serializable {
+public class Log implements Serializable {
     /**
-     * 用户ip
+     * 主键
      */
-    private String ip;
+    @TableId(type = IdType.AUTO)
+    private Long id;
 
     /**
-     * 标题，操作方法描述
+     * 日志名称
      */
-    private String title;
+    private String description;
 
     /**
-     * 操作方法
+     * 来源,具体含义参考代码规定
+     */
+    private Integer resourceType;
+
+    /**
+     * 日志类型
+     */
+    private String logType;
+
+    /**
+     * 请求方法全命名
      */
     private String method;
 
     /**
-     * 详情
+     * 请求方式，get post put delete
      */
-    private String info;
+    private String methodType;
 
     /**
-     * 状态
+     * 请求参数
      */
-    private Integer state;
+    private String params;
+
+    /**
+     * 请求IP
+     */
+    private String requestIp;
+
+    /**
+     * 请求时间，单位毫秒
+     */
+    private Long time;
+
+    /**
+     * 请求人名称
+     */
+    private String username;
+
+    /**
+     * 请求地址
+     */
+    private String address;
+
+    /**
+     * 请求浏览器类型
+     */
+    private String browser;
+
+    /**
+     * 例外情况
+     */
+    private String exceptionDetail;
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 请求唯一ID
+     */
+    private String requestId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
