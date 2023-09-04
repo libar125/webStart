@@ -2,7 +2,28 @@
   "components": {
     "schemas": {
       "_test_testrequest": {},
-      "_test_testresponse": {}
+      "_user_listresponse": {
+        "properties": {
+          "code": {
+            "format": "int32",
+            "description": "状态标识",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "返回信息",
+            "type": "string"
+          },
+          "data": {
+            "description": "返回数据(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_user_listrequest": {},
+      "_test_testresponse": {},
+      "_logger_listrequest": {},
+      "_logger_listresponse": {}
     }
   },
   "servers": [
@@ -12,13 +33,69 @@
   ],
   "openapi": "3.0.3",
   "paths": {
+    "/user/list": {
+      "post": {
+        "summary": "查询所有用户列表",
+        "deprecated": false,
+        "description": "查询所有用户列表",
+        "tags": [
+          "用户控制器"
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded;charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_user_listrequest"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "curl -X POST -i http://127.0.0.1/user/list --data \u0027sto\u003d99imtt\u0027"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_user_listresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"code\": 348,\n  \"msg\": \"7u0x0i\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "588b3da65c891b1c66a62d67fa9a89ec",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "分页查询参数",
+            "required": false,
+            "example": "w1d37b",
+            "name": "sto"
+          }
+        ]
+      }
+    },
     "/test/test": {
       "get": {
-        "summary": "",
+        "summary": "这个是一个测试",
         "deprecated": false,
-        "description": "",
+        "description": "这个是一个测试",
         "tags": [
-          ""
+          "测试控制器"
         ],
         "responses": {
           "200": {
@@ -39,6 +116,36 @@
           }
         },
         "operationId": "d73d1bee6efeae974c7e6189b09cada9",
+        "parameters": []
+      }
+    },
+    "/logger/list": {
+      "get": {
+        "summary": "测试日志",
+        "deprecated": false,
+        "description": "测试日志",
+        "tags": [
+          "日志控制器"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "e453764ba86c2a3a9be3cb489ba90b82",
         "parameters": []
       }
     }

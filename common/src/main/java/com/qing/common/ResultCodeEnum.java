@@ -33,11 +33,11 @@ public enum ResultCodeEnum {
         this.message = message;
     }
 
-    public Integer code() {
+    public Integer getCode() {
         return this.code;
     }
 
-    public String message() {
+    public String  getMessage() {
         return this.message;
     }
 }

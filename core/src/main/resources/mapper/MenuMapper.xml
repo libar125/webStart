@@ -33,4 +33,26 @@
         remark,create_by,create_time,
         update_by,update_time,is_delete
     </sql>
+
+    <select id="getMenuByUserId" resultType="com.qing.core.vo.fapi.menu.UserMenuVo">
+        SELECT DISTINCT
+            sm.id,
+            sm.`name`,
+            sm.sort,
+            sm.url,
+            sm.path,
+            sm.type,
+            sm.perms
+        FROM
+            sys_menu sm
+                INNER JOIN sys_role_menu srm ON sm.id = srm.menu_id
+                INNER JOIN sys_user_role sur ON srm.role_id = sur.role_id
+                INNER JOIN sys_user su ON su.id = sur.user_id
+        WHERE
+            sm.is_delete = 0
+          AND su.is_delete = 0
+          AND su.id = #{userId}
+        ORDER BY sm.sort DESC
+    </select>
+
 </mapper>

@@ -2,6 +2,10 @@ package com.qing.core.mapper;
 
 import com.qing.core.entity.Menu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.qing.core.vo.fapi.menu.UserMenuVo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
 * @author ADMIN
@@ -10,6 +14,12 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.qing.core.entity.Menu
 */
 public interface MenuMapper extends BaseMapper<Menu> {
+
+    /**
+     * 根据
+     * @return
+     */
+    List<UserMenuVo> getMenuByUserId(@Param("userId") Long userId);
 
 }
 

@@ -28,4 +28,22 @@
         create_by,create_time,update_by,
         update_time,is_delete
     </sql>
+
+
+    <select id="userList" resultType="com.qing.core.vo.fapi.user.UserPageVo">
+        SELECT
+            su.id,
+            su.user_name userName,
+            su.real_name realName,
+            sd.`name` deptName,
+            su.picture,
+            su.login_date loginDate,
+            ( SELECT user_name FROM sys_user WHERE is_delete = 0 AND id = su.create_by ) createByUserName
+        FROM
+            sys_user su
+                LEFT JOIN sys_dept sd ON su.dept_id = sd.id
+                AND sd.is_delete = 0
+        WHERE
+            su.is_delete = 0
+    </select>
 </mapper>

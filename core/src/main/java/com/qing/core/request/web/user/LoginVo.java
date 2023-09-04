@@ -5,10 +5,16 @@ import lombok.Data;
 import javax.validation.constraints.NotEmpty;
 
 @Data
-
 public class LoginVo {
 
-    @NotEmpty(message = "用户名不能为空")
+    /**
+     * 手机号
+     */
+    private String phone;
+
+    /**
+     * 用户名
+     */
     private String username;
 
     @NotEmpty(message = "密码不能为空")
