@@ -9,22 +9,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Log {
 
-    /**
-     * 操作模块
-     * @return
-     */
-    String module() default "";
+    /** 日志名称 **/
+    String value() default "";
 
-    /**
-     * 操作类型
-     * @return
-     */
-    String type() default "";
-
-    /**
-     * 操作说明
-     * @return
-     */
-    String desc() default "";
-
+    /** 日志类型 1-PC管理端 2-APP端(待扩展) **/
+    int type() default 1;
 }

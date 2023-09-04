@@ -35,3 +35,11 @@ knife4j:
     routes:
       - name: 用户
         location: classpath:openapi/openapi.json
+
+logging:
+  level:
+    com.jk: debug
+    org.springframework: warn
+  file:
+    path: ./logs # 配置日志打印目录,默认名称为:spring.log
+    name: ./logs/SpringLogging.log # 配置日志打印目录和名称,和上面的path选一即可

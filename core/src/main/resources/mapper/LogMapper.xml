@@ -6,22 +6,27 @@
 
     <resultMap id="BaseResultMap" type="com.qing.core.entity.Log">
             <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="createBy" column="create_by" jdbcType="BIGINT"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-            <result property="updateBy" column="update_by" jdbcType="BIGINT"/>
-            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
-            <result property="ip" column="ip" jdbcType="VARCHAR"/>
-            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="resourceType" column="resource_type" jdbcType="INTEGER"/>
+            <result property="logType" column="log_type" jdbcType="VARCHAR"/>
             <result property="method" column="method" jdbcType="VARCHAR"/>
-            <result property="info" column="info" jdbcType="VARCHAR"/>
-            <result property="state" column="state" jdbcType="TINYINT"/>
-            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+            <result property="methodType" column="method_type" jdbcType="VARCHAR"/>
+            <result property="params" column="params" jdbcType="VARCHAR"/>
+            <result property="requestIp" column="request_ip" jdbcType="VARCHAR"/>
+            <result property="time" column="time" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="browser" column="browser" jdbcType="VARCHAR"/>
+            <result property="exceptionDetail" column="exception_detail" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="requestId" column="request_id" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,create_by,create_time,
-        update_by,update_time,ip,
-        title,method,info,
-        state,is_delete
+        id,description,resource_type,
+        log_type,method,method_type,
+        params,request_ip,time,
+        username,address,browser,
+        exception_detail,create_time,request_id
     </sql>
 </mapper>
